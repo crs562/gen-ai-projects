@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: sql-chat-agent
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    region: oregon
+    branch: main
+    buildCommand: docker build -t sql-chat-agent .
+    startCommand: streamlit run app.py --server.port=$PORT --server.address=0.0.0.0 --server.headless=true
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false  # This will prompt you to enter the value in Render dashboard
+      - key: PORT
+        value: "8501"
+      - key: STREAMLIT_SERVER_HEADLESS
+        value: "true"
+      - key: STREAMLIT_SERVER_ENABLE_CORS
+        value: "false"
+      - key: STREAMLIT_SERVER_ENABLE_XSRF_PROTECTION
+        value: "false"
+    healthCheckPath: /_stcore/health
+    disk:
+      name: data
+      mountPath: /app/data
+      sizeGB: 1
+    autoDeploy: true

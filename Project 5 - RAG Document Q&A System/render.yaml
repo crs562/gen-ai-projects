@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: rag-document-qa
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true --server.enableCORS false --server.enableXsrfProtection false
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: PYTHONPATH
+        value: /opt/render/project/src
+    disk:
+      name: rag-storage
+      mountPath: /opt/render/project/src/research_papers
+      sizeGB: 1
