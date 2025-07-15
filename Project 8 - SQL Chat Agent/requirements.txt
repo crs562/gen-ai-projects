@@ -1,6 +1,6 @@
-streamlit==1.28.1
-langchain==0.0.340
-langchain-groq==0.0.1
-sqlalchemy==2.0.23
-mysql-connector-python==8.2.0
-pathlib2==2.3.7
+streamlit
+langchain
+langchain-groq
+sqlalchemy
+mysql-connector-python
+pathlib2
