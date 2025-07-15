@@ -172,6 +172,10 @@ For persistent file storage across deployments:
 3. Make your changes
 4. Submit a pull request
 
+## Running Application
+
+![alt text](image.png)
+
 ## License
 
 This project is open source and available under the [MIT License](LICENSE).
