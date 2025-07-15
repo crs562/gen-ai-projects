@@ -158,6 +158,10 @@ Use the render.yaml file for one-click deployment:
 3. **Model Selection**: Use smaller models for faster responses
 4. **Caching**: Implement caching for frequently accessed documents
 
+## Application running:
+
+![alt text](image.png)
+
 
 ## 🤝 Contributing
 
