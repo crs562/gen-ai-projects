@@ -40,3 +40,8 @@ PyPDF: PDF processing
 ## Deployment
 Ready for deployment on Render with included render.yaml configuration.
 
+## Running Application
+
+![alt text](image.png)
+
+![alt text](image-1.png)
